@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8cdda, #1e3c72); /* Elegant gradient background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+        h1 {
+            font-size: 42px;
+            color: #ff5c8d; /* Soft pink color */
+            margin-bottom: 30px;
+            font-weight: 600;
+            animation: fadeInUp 1s ease-out;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 500;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        button {
+            padding: 15px 50px;
+            font-size: 18px;
+            background-color: #ff5c8d;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #ff3d60;
+            transform: translateY(-5px);
+        }
+        button:active {
+            transform: translateY(2px);
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
+            margin-top: 30px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInMessage 1.5s ease-out forwards;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInMessage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>Would you love to grow old with me, Rhe?</h1>
+    <p>Click "Yes" if you want to spend forever with me.</p>
+
+    <button class="yes-btn" id="yesButton">Yes</button>
+    <button class="no-btn" id="noButton" disabled>No</button>
+
+    <div id="thankYouMessage" class="message hidden">
+        Thank you so much for choosing me as your forever. I promise to never disappoint you, and I'll keep loving you more day by day. I hope our bond grows stronger too with time. Rhe, for you a thousand times over. 💖
+    </div>
+</div>
+
+<script>
+    document.getElementById('yesButton').addEventListener('click', function() {
+        // Hide the "Yes" button
+        document.getElementById('yesButton').style.display = 'none';
+
+        // Show the thank you message
+        document.getElementById('thankYouMessage').classList.remove('hidden');
+    });
+</script>
+
+</body>
+</html>
